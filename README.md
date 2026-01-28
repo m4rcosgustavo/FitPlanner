@@ -7,7 +7,7 @@
 ## Sobre o Projeto
 O **FitPlanner** é um aplicativo web desenvolvido com **HTML, CSS e JavaScript**, cujo objetivo é permitir a **organização de treinos de academia** por meio de um checklist de exercícios.
 
-Cada exercício é cadastrado como um item contendo nome, categoria muscular, valor unitário e quantidade, possibilitando **listagem dinâmica**, **cálculos automáticos** e **persistência de dados** no navegador.
+Cada exercício é cadastrado como um item contendo **nome**, **categoria muscular**, **valor unitário** e **quantidade**, possibilitando **listagem dinâmica**, **cálculos automáticos** e **persistência de dados** no navegador.
 
 O projeto possui caráter **educativo**, sendo voltado à prática dos **fundamentos básicos de JavaScript**, conforme proposto na disciplina.
 
@@ -33,7 +33,7 @@ O projeto possui caráter **educativo**, sendo voltado à prática dos **fundame
 - Cadastro de exercícios  
 - Validação dos campos do formulário  
 - Listagem dinâmica em tabela  
-- Cálculo automático do total do treino  
+- Cálculo automático do valor total do treino  
 - Cálculo da quantidade total de exercícios  
 - Métrica adicional (média do valor unitário)  
 - Remoção de exercícios  
@@ -50,56 +50,51 @@ O projeto possui caráter **educativo**, sendo voltado à prática dos **fundame
 ---
 
 ## Estrutura de Arquivos
-fitplanner/
-├─ index.html
-├─ style.css
-├─ app.js
-└─ README.md
----
+```bash
+FitPlanner/
+│
+├── index.html        # Estrutura principal da aplicação
+├── style.css         # Estilos e layout
+├── script.js         # Lógica JavaScript (cadastro, cálculos e DOM)
+│
+└── README.md         # Documentação do projeto
+```
 
-Conceitos de JavaScript Aplicados
-- Arrays  
-- Objetos  
+
+## Conceitos de JavaScript Aplicados
+- Declaração de variáveis (**let**, **const**)  
 - Funções  
-- Condicionais (`if / else`)  
-- Laços de repetição (`for`, `forEach`)  
+- Arrays e objetos  
+- Estruturas condicionais (**if / else**)  
+- Laços de repetição  
 - Manipulação do DOM  
-- Armazenamento local (`localStorage`)  
-- Conversão de dados com `JSON.stringify` e `JSON.parse`  
+- Eventos  
+- Conversão e validação de dados  
+- Armazenamento local (**localStorage**)  
+- Uso de **JSON.stringify()** e **JSON.parse()**
 
 ---
 
 ## Como Executar o Projeto
 1. Faça o download ou clone o repositório  
-2. Abra o arquivo `index.html` em um navegador  
-3. Preencha o formulário com os dados do exercício  
-4. Clique em **Adicionar** para inserir o item na tabela  
-5. Visualize os cálculos automáticos do treino  
-
-Os dados permanecem salvos mesmo após fechar o navegador.
+2. Abra o arquivo **index.html** em um navegador moderno  
+3. Cadastre os exercícios e acompanhe os cálculos automaticamente  
 
 ---
 
-## Integrantes do Grupo
-- *Marcos Gustavo*  
-- *Heloisa Pereira*
-- *Maria Luiza*
-- *Kamilly Barone*
-- *Pedro Swamarn* 
+## Contexto Acadêmico
+Este projeto foi desenvolvido como **atividade prática avaliativa**, com o objetivo de consolidar os conhecimentos iniciais de **JavaScript**, simulando uma aplicação real voltada ao planejamento e organização de treinos de academia.
 
 ---
 
-## Divisão de Tarefas
-- Estrutura HTML: __________________  
-- Estilização CSS: __________________  
-- Lógica JavaScript: __________________  
-- Documentação (README): __________________  
+## Integrantes do Projeto
+- Marcos Gustavo  
+- Heloísa Pereira  
+- Maria Luiza  
+- Kamilly Barone  
+- Pedro Swamarn  
 
 ---
 
 ## Considerações Finais
-O **FitPlanner** atende a todos os requisitos propostos para o projeto de **JavaScript básico**, apresentando uma solução funcional, organizada e alinhada aos objetivos da disciplina, além de possibilitar a aplicação prática dos conteúdos estudados em sala de aula.
-
----
-
-**Projeto desenvolvido para fins educacionais.**
+O **FitPlanner** demonstra como conceitos básicos de programação podem ser aplicados na construção de uma aplicação funcional, organizada e próxima da realidade do usuário, servindo como base para projetos futuros e evoluções mais complexas.
