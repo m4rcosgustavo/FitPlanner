@@ -501,6 +501,21 @@ img{
   }
 }
 
+/* ===== BOTÕES LOGIN/CADASTRAR NO MENU ===== */
+.nav-btn{
+  border: 1px solid rgba(255,255,255,0.22);
+}
+
+.nav-btn-green{
+  background: #0b7a62;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.nav-btn-green:hover{
+  filter: brightness(1.05);
+}
+
 /* ===== HERO RIGHT (círculo perfeito + imagem por cima) ===== */
 
 .hero-right{

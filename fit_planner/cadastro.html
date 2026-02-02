@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitPlanner | Cadastro</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="cadastro.css" />
+</head>
+<body>
+
+  <!-- MENU -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html" aria-label="Ir para Home">
+        <img class="brand-logo" src="assets/logo_fitplanner.png" alt="FitPlanner">
+      </a>
+
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="index.html#sobre">Sobre</a>
+        <a class="nav-link" href="index.html#funcionalidades">Funcionalidades</a>
+        <a class="nav-link" href="index.html#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- VOLTAR -->
+  <div class="container">
+    <a class="back" href="login.html">voltar &gt;</a>
+  </div>
+
+  <!-- CONTEÚDO -->
+  <main class="container main">
+    <h1 class="welcome">Crie sua conta</h1>
+
+    <section class="register-card">
+      <h2 class="register-title">Cadastro</h2>
+
+      <form id="cadastroForm" class="register-form">
+        <label class="field">
+          <span>nome</span>
+          <input id="nome" type="text" placeholder="informe seu nome..." required />
+        </label>
+
+        <label class="field">
+          <span>email</span>
+          <input id="email" type="email" placeholder="informe seu email..." required />
+        </label>
+
+        <label class="field">
+          <span>senha</span>
+          <input id="senha" type="password" placeholder="senha..." required />
+        </label>
+
+        <label class="field">
+          <span>confirmar senha</span>
+          <input id="confirmar" type="password" placeholder="confirme sua senha..." required />
+        </label>
+
+        <button class="btn" type="submit">cadastrar</button>
+
+        <p id="msg" class="msg"></p>
+      </form>
+    </section>
+
+    <p class="signin">
+      Já tem conta? <a href="login.html">Login</a>
+    </p>
+  </main>
+
+  <script src="cadastro.js"></script>
+</body>
+</html>

@@ -31,3 +31,23 @@ form.addEventListener("submit", (e) => {
     hint.textContent = "";
   }, 2500);
 });
+
+
+// ===== BOTÃO "COMEÇAR AGORA" (fluxo: login -> home -> cadastro treino) =====
+const btnComecar = document.getElementById("btnComecar");
+
+if (btnComecar) {
+  btnComecar.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const logado = localStorage.getItem("fitplanner_logado") === "true";
+
+    if (!logado) {
+      // 1º clique sem login -> vai para login
+      window.location.href = "login.html";
+    } else {
+      // depois de logado -> vai para Cadastro de Treino
+      window.location.href = "cadastro_treino.html";
+    }
+  });
+}

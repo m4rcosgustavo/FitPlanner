@@ -1,0 +1,172 @@
+/* ===== BASE ===== */
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
+.container{
+  width: 1080px;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+/* ===== MENU ===== */
+.topbar{
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topbar-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.brand{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-logo{
+  height: 26px;
+  width: auto;
+}
+
+.nav{
+  display: flex;
+  gap: 18px;
+}
+
+.nav-link{
+  color: #cfd3d6;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.nav-link:hover{
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+
+.nav-link.active{
+  color: #fff;
+}
+
+/* ===== VOLTAR ===== */
+.back{
+  display: inline-block;
+  margin-top: 14px;
+  color: #111;
+  font-size: 11px;
+  text-decoration: underline;
+}
+
+/* ===== ÁREA PRINCIPAL ===== */
+.main{
+  padding: 22px 0 40px;
+  text-align: center;
+}
+
+.welcome{
+  margin: 18px 0 18px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* ===== CARD LOGIN ===== */
+.login-card{
+  width: 380px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #0b7a62;
+  border-radius: 8px;
+  padding: 26px 22px;
+}
+
+.login-title{
+  margin: 0 0 22px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* ===== FORM ===== */
+.login-form{
+  text-align: left;
+}
+
+.field{
+  display: block;
+  margin-bottom: 16px;
+}
+
+.field span{
+  display: block;
+  margin-bottom: 6px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.field input{
+  width: 100%;
+  padding: 14px 14px;
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.btn{
+  display: block;
+  margin: 10px auto 0;
+  padding: 8px 22px;
+  border: 0;
+  border-radius: 10px;
+  background: #fff;
+  color: #111;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  filter: brightness(0.96);
+}
+
+/* mensagem */
+.msg{
+  margin: 10px 0 0;
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+  min-height: 16px;
+}
+
+/* ===== LINK CADASTRO ===== */
+.signup{
+  margin: 14px 0 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.signup a{
+  color: #0b7a62;
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 640px){
+  .nav{ display: none; }
+}
