@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitPlanner — Landing Page</title>
+
+  <!-- Fonte parecida -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#home" aria-label="Ir para Home">
+        <img class="brand__logo" src="assets/logo_fitplanner.png" alt="FitPlanner" />
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="nav__link is-active" href="#home">Home</a>
+        <a class="nav__link" href="#sobre">Sobre</a>
+        <a class="nav__link" href="#funcionalidades">Funcionalidades</a>
+        <a class="nav__link" href="#contato">Contato</a>
+      </nav>
+
+      <button class="nav__burger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="home" class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+
+    <div class="container hero__inner">
+      <div class="hero__left">
+        <h1 class="hero__title">
+          RESULTADOS QUE VOCÊ VÊ,<br />
+          ORGANIZAÇÃO QUE VOCÊ SENTE!
+        </h1>
+
+        <p class="hero__text">
+          Transforme sua rotina de treinos com uma plataforma simples, eficiente e pensada
+          para quem busca desempenho, controle e evolução constante.
+        </p>
+
+        <a class="btn btn--primary" href="#funcionalidades">COMEÇAR AGORA</a>
+      </div>
+
+      <div class="hero__right">
+        <div class="hero__circle">
+          <!-- Troque o src pela imagem que você quiser (ex: /assets/hero-people.png) -->
+          <img
+            src="https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=900&auto=format&fit=crop"
+            alt="Pessoas treinando (imagem ilustrativa)"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FUNCIONALIDADES -->
+  <section id="funcionalidades" class="section section--light">
+    <div class="container">
+      <header class="section__head">
+        <h2 class="section__title">FUNCIONALIDADES</h2>
+        <p class="section__subtitle">
+          O FitPlanner oferece recursos essenciais para o planejamento e acompanhamento de treinos,
+          facilitando a organização e o controle da evolução do usuário.
+        </p>
+      </header>
+
+      <div class="features">
+        <article class="card">
+          <div class="icon icon--red" aria-hidden="true">
+            <!-- checklist -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M9 11l2 2 4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 21h10a4 4 0 0 0 4-4V7a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v10a4 4 0 0 0 4 4Z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Planejamento de Treinos</h3>
+          <p class="card__text">Organize exercícios, séries, repetições e cargas de forma prática.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon icon--red" aria-hidden="true">
+            <!-- gráfico -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 19H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M7 15l4-4 3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M19 8v3h-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Acompanhamento de Progresso</h3>
+          <p class="card__text">Visualize sua evolução ao longo do tempo com mais clareza.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon icon--red" aria-hidden="true">
+            <!-- storage -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 6c0-1.1 3.6-2 8-2s8 .9 8 2-3.6 2-8 2-8-.9-8-2Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M4 6v6c0 1.1 3.6 2 8 2s8-.9 8-2V6" stroke="currentColor" stroke-width="2"/>
+              <path d="M4 12v6c0 1.1 3.6 2 8 2s8-.9 8-2v-6" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Armazenamento Local</h3>
+          <p class="card__text">Seus dados ficam salvos diretamente no navegador.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon icon--red" aria-hidden="true">
+            <!-- smile -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M8 14s1.5 2 4 2 4-2 4-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M9 10h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <path d="M15 10h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Interface Intuitiva</h3>
+          <p class="card__text">Design simples e funcional para facilitar o uso diário.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section section--white">
+    <div class="container">
+      <header class="section__head">
+        <h2 class="section__title">SOBRE O PROJETO</h2>
+        <p class="section__subtitle">
+          O FitPlanner é um aplicativo web desenvolvido como projeto acadêmico, com o objetivo
+          de aplicar conceitos iniciais de programação web na construção de uma solução funcional
+          voltada ao planejamento de treinos de academia.
+        </p>
+        <p class="section__subtitle section__subtitle--small">
+          A aplicação permite que o usuário organize exercícios, séries, repetições e cargas,
+          além de acompanhar sua evolução de forma simples e acessível.
+        </p>
+      </header>
+
+      <div class="about-cards">
+        <div class="mini-card">
+          <h3 class="mini-card__title">Contexto Acadêmico</h3>
+          <p class="mini-card__text">
+            Projeto desenvolvido para fins de prática e consolidação de conceitos básicos de desenvolvimento web.
+          </p>
+        </div>
+
+        <div class="mini-card">
+          <h3 class="mini-card__title">Tecnologias Utilizadas</h3>
+          <ul class="mini-card__list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USUÁRIOS -->
+  <section class="section section--green">
+    <div class="container">
+      <header class="section__head section__head--center">
+        <h2 class="section__title section__title--light">USUÁRIOS</h2>
+      </header>
+
+      <div class="testimonials">
+        <article class="t-card">
+          <div class="avatar" aria-hidden="true"></div>
+          <div>
+            <p class="t-card__text">
+              “O FitPlanner facilita muito a organização dos treinos. A interface é simples e ajuda a manter o controle das atividades.”
+            </p>
+            <p class="t-card__name">— Usuário Teste</p>
+          </div>
+        </article>
+
+        <article class="t-card">
+          <div class="avatar" aria-hidden="true"></div>
+          <div>
+            <p class="t-card__text">
+              “A aplicação é intuitiva e cumpre bem a proposta de planejar e acompanhar treinos de forma prática.”
+            </p>
+            <p class="t-card__name">— Usuário Teste</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section section--white">
+    <div class="container">
+      <header class="section__head">
+        <h2 class="section__title">CONTATO</h2>
+        <p class="section__subtitle">
+          Quer falar com a equipe? Deixe sua mensagem.
+        </p>
+      </header>
+
+      <form class="contact" autocomplete="on">
+        <div class="contact__grid">
+          <label class="field">
+            <span>Nome</span>
+            <input type="text" name="nome" placeholder="Seu nome" required />
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="seuemail@email.com" required />
+          </label>
+
+          <label class="field field--full">
+            <span>Mensagem</span>
+            <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn--dark">ENVIAR</button>
+        <p class="form-hint" id="formHint" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <div class="brand brand--footer">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__text">FITPLANNER</span>
+        </div>
+        <p class="footer__text">
+          Projeto acadêmico desenvolvido para fins educacionais, com foco no aprendizado e consolidação
+          de conceitos básicos de desenvolvimento web.
+        </p>
+        <p class="footer__copy">© 2026 — FitPlanner</p>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Integrantes do Projeto</h3>
+        <ul class="footer__list">
+          <li>Marcos Gustavo</li>
+          <li>Heloísa Pereira</li>
+          <li>Maria Luiza</li>
+          <li>Kamilly Barone</li>
+          <li>Pedro Swamarn</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
