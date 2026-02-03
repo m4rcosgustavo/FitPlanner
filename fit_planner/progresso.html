@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitPlanner | Progresso</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="progresso.css" />
+</head>
+<body>
+
+  <!-- MENU -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html" aria-label="Ir para Home">
+        <img class="brand-logo" src="assets/logo_fitplanner.png" alt="FitPlanner">
+      </a>
+
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="cadastro_treino.html">Cadastro de Treino</a>
+        <a class="nav-link" href="lista_treinos.html">Lista de Treinos</a>
+        <a class="nav-link active" href="progresso.html">Progresso</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- VOLTAR -->
+  <div class="container">
+    <a class="back" href="index.html">voltar &gt;</a>
+  </div>
+
+  <main class="container main">
+    <h1 class="title">Seu progresso</h1>
+
+    <!-- RESUMO -->
+    <section class="summary">
+      <div class="summary-box">
+        <p class="summary-label">Quantidade de treinos</p>
+        <p id="qtdTreinos" class="summary-value">0</p>
+      </div>
+
+      <div class="summary-box">
+        <p class="summary-label">Volume total</p>
+        <p id="volumeTotal" class="summary-value">0</p>
+      </div>
+
+      <div class="summary-box">
+        <p class="summary-label">Maior volume (um treino)</p>
+        <p id="maiorVolume" class="summary-value">0</p>
+      </div>
+
+      <div class="summary-box">
+        <p class="summary-label">Média de volume por treino</p>
+        <p id="mediaVolume" class="summary-value">0</p>
+      </div>
+    </section>
+
+    <!-- EXTRAS -->
+    <section class="card">
+      <h2 class="card-title">Métricas extras</h2>
+
+      <div class="extras">
+        <div class="extra-box">
+          <p class="extra-label">Total de séries</p>
+          <p id="totalSeries" class="extra-value">0</p>
+        </div>
+
+        <div class="extra-box">
+          <p class="extra-label">Total de repetições</p>
+          <p id="totalReps" class="extra-value">0</p>
+        </div>
+      </div>
+
+      <h3 class="sub-title">Top 3 exercícios mais cadastrados</h3>
+      <div id="topExercicios" class="top-list"></div>
+
+      <p id="msg" class="msg"></p>
+    </section>
+  </main>
+
+  <script src="progresso.js"></script>
+</body>
+</html>

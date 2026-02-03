@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitPlanner | Lista de Treinos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="lista_treinos.css" />
+</head>
+<body>
+
+  <!-- MENU -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html" aria-label="Ir para Home">
+        <img class="brand-logo" src="assets/logo_fitplanner.png" alt="FitPlanner">
+      </a>
+
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="cadastro_treino.html">Cadastro de Treino</a>
+        <a class="nav-link active" href="lista_treinos.html">Lista de Treinos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- VOLTAR -->
+  <div class="container">
+    <a class="back" href="cadastro_treino.html">voltar &gt;</a>
+  </div>
+
+  <main class="container main">
+    <h1 class="title">Seus treinos</h1>
+
+    <!-- RESUMO -->
+    <section class="summary">
+      <div class="summary-box">
+        <p class="summary-label">Quantidade de treinos</p>
+        <p id="qtdTreinos" class="summary-value">0</p>
+      </div>
+
+      <div class="summary-box">
+        <p class="summary-label">Volume total (séries × reps × carga)</p>
+        <p id="volumeTotal" class="summary-value">0</p>
+      </div>
+    </section>
+
+    <!-- LISTA -->
+    <section class="card">
+      <h2 class="card-title">Lista</h2>
+
+      <div id="lista" class="list"></div>
+
+      <p id="msg" class="msg"></p>
+    </section>
+
+    <!-- EDITAR -->
+    <section class="card edit-card">
+      <h2 class="card-title">Editar treino</h2>
+
+      <form id="editForm" class="form">
+        <input id="editId" type="hidden" />
+
+        <label class="field">
+          <span>Nome do treino</span>
+          <input id="editNomeTreino" type="text" placeholder="Ex: Treino A..." required />
+        </label>
+
+        <label class="field">
+          <span>Exercício</span>
+          <input id="editExercicio" type="text" placeholder="Ex: Supino reto..." required />
+        </label>
+
+        <div class="grid">
+          <label class="field">
+            <span>Séries</span>
+            <input id="editSeries" type="number" min="1" required />
+          </label>
+
+          <label class="field">
+            <span>Repetições</span>
+            <input id="editReps" type="number" min="1" required />
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Carga (kg)</span>
+          <input id="editCarga" type="number" min="0" />
+        </label>
+
+        <div class="actions">
+          <button class="btn" type="submit">Salvar edição</button>
+          <button id="cancelBtn" class="btn btn-light" type="button">Cancelar</button>
+        </div>
+
+        <p id="editMsg" class="msg"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="lista_treinos.js"></script>
+</body>
+</html>
