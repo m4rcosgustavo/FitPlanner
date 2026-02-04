@@ -1,14 +1,51 @@
+// ===== BLOQUEIO (precisa estar logado) =====
+if (localStorage.getItem("fitplanner_logado") !== "true") {
+  window.location.href = "./login.html";
+}
+
+// ===== Util: chave de treinos por usuário =====
+function getEmailLogado() {
+  return (localStorage.getItem("fitplanner_email") || "").trim().toLowerCase();
+}
+
+function getTreinosKey() {
+  const email = getEmailLogado();
+  return `fitplanner_treinos__${email || "anon"}`;
+}
+
+// ===== Botão Sair no menu (app) =====
+(function () {
+  const nav = document.querySelector(".nav");
+  if (!nav) return;
+  if (nav.querySelector("#btnSair")) return;
+
+  const btn = document.createElement("a");
+  btn.id = "btnSair";
+  btn.href = "#";
+  btn.className = "nav-link";
+  btn.textContent = "Sair";
+
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    localStorage.removeItem("fitplanner_logado");
+    localStorage.removeItem("fitplanner_email");
+    window.location.href = "../index.html";
+  });
+
+  nav.appendChild(btn);
+})();
+
 const form = document.getElementById("treinoForm");
 const msg = document.getElementById("msg");
 
 function getTreinos() {
-  const dados = localStorage.getItem("fitplanner_treinos");
+  const dados = localStorage.getItem(getTreinosKey());
   if (!dados) return [];
   return JSON.parse(dados);
 }
 
 function saveTreinos(lista) {
-  localStorage.setItem("fitplanner_treinos", JSON.stringify(lista));
+  localStorage.setItem(getTreinosKey(), JSON.stringify(lista));
 }
 
 form.addEventListener("submit", (e) => {
@@ -19,11 +56,8 @@ form.addEventListener("submit", (e) => {
   const series = Number(document.getElementById("series").value);
   const reps = Number(document.getElementById("reps").value);
   const cargaValor = document.getElementById("carga").value.trim();
-
-  // carga é opcional
   const carga = cargaValor === "" ? 0 : Number(cargaValor);
 
-  // validação simples
   if (!nomeTreino || !exercicio) {
     msg.textContent = "Preencha nome do treino e exercício.";
     return;
@@ -42,7 +76,7 @@ form.addEventListener("submit", (e) => {
   }
 
   const novoTreino = {
-    id: Date.now(),        // id simples
+    id: Date.now(),
     nomeTreino,
     exercicio,
     series,
@@ -57,7 +91,5 @@ form.addEventListener("submit", (e) => {
   msg.textContent = "Treino salvo com sucesso!";
   form.reset();
 
-  setTimeout(() => {
-    msg.textContent = "";
-  }, 2000);
+  setTimeout(() => (msg.textContent = ""), 2000);
 });

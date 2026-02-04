@@ -9,28 +9,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="cadastro_treino.css" />
+  <!-- CSS está em /css -->
+  <link rel="stylesheet" href="../css/cadastro_treino.css" />
 </head>
 <body>
 
   <!-- MENU -->
   <header class="topbar">
     <div class="container topbar-inner">
-      <a class="brand" href="index.html" aria-label="Ir para Home">
-        <img class="brand-logo" src="assets/logo_fitplanner.png" alt="FitPlanner">
+      <a class="brand" href="../index.html" aria-label="Ir para Home">
+        <img class="brand-logo" src="../assets/logo_fitplanner.png" alt="FitPlanner">
       </a>
 
       <nav class="nav">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link active" href="cadastro_treino.html">Cadastro de Treino</a>
-        <a class="nav-link" href="lista_treinos.html">Lista de Treinos</a>
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link active" href="./cadastro_treino.html">Cadastro de Treino</a>
+        <a class="nav-link" href="./lista_treinos.html">Lista de Treinos</a>
       </nav>
     </div>
   </header>
 
   <!-- VOLTAR -->
   <div class="container">
-    <a class="back" href="index.html">voltar &gt;</a>
+    <a class="back" href="../index.html">voltar &gt;</a>
   </div>
 
   <!-- CONTEÚDO -->
@@ -70,7 +71,7 @@
 
         <div class="actions">
           <button class="btn" type="submit">Salvar treino</button>
-          <a class="btn btn-light" href="lista_treinos.html">Ver lista</a>
+          <a class="btn btn-light" href="./lista_treinos.html">Ver lista</a>
         </div>
 
         <p id="msg" class="msg"></p>
@@ -78,6 +79,7 @@
     </section>
   </main>
 
-  <script src="cadastro_treino.js"></script>
+  <!-- JS está em /js -->
+  <script src="../js/cadastro_treino.js"></script>
 </body>
 </html>

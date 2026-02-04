@@ -1,3 +1,8 @@
+// ===== Se já estiver logado, manda direto pro progresso =====
+if (localStorage.getItem("fitplanner_logado") === "true") {
+  window.location.href = "./progresso.html";
+}
+
 const form = document.getElementById("loginForm");
 const msg = document.getElementById("msg");
 
@@ -32,9 +37,9 @@ form.addEventListener("submit", (e) => {
   localStorage.setItem("fitplanner_logado", "true");
   localStorage.setItem("fitplanner_email", email);
 
-  msg.textContent = "Login feito! Indo para a Home...";
+  msg.textContent = "Login feito! Indo para o Progresso...";
 
   setTimeout(() => {
-    window.location.href = "index.html"; // volta pra Home
+    window.location.href = "./progresso.html";
   }, 700);
 });

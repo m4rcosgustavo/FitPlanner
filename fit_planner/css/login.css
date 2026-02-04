@@ -36,7 +36,7 @@ body{
 }
 
 .brand-logo{
-  height: 26px;
+  height: 50px;
   width: auto;
 }
 
@@ -72,7 +72,7 @@ body{
   text-decoration: underline;
 }
 
-/* ===== MAIN ===== */
+/* ===== ÁREA PRINCIPAL ===== */
 .main{
   padding: 22px 0 40px;
   text-align: center;
@@ -84,9 +84,9 @@ body{
   font-weight: 700;
 }
 
-/* ===== CARD ===== */
-.card{
-  width: 520px;
+/* ===== CARD LOGIN ===== */
+.login-card{
+  width: 680px;
   max-width: 100%;
   margin: 0 auto;
   background: #0b7a62;
@@ -94,21 +94,21 @@ body{
   padding: 26px 22px;
 }
 
-.card-title{
-  margin: 0 0 20px;
+.login-title{
+  margin: 0 0 22px;
   color: #fff;
   font-size: 18px;
   font-weight: 800;
 }
 
 /* ===== FORM ===== */
-.form{
+.login-form{
   text-align: left;
 }
 
 .field{
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .field span{
@@ -119,26 +119,24 @@ body{
   font-weight: 600;
 }
 
-.field input,
-.field textarea{
+.field input{
   width: 100%;
   padding: 14px 14px;
   border: 0;
   outline: none;
   border-radius: 10px;
   font-size: 12px;
-  font-family: inherit;
 }
 
 .btn{
   display: block;
   margin: 10px auto 0;
-  padding: 9px 22px;
+  padding: 8px 22px;
   border: 0;
   border-radius: 10px;
   background: #fff;
   color: #111;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 12px;
   cursor: pointer;
 }
@@ -147,12 +145,25 @@ body{
   filter: brightness(0.96);
 }
 
+/* mensagem */
 .msg{
-  margin: 12px 0 0;
+  margin: 10px 0 0;
   font-size: 11px;
   text-align: center;
   color: #fff;
   min-height: 16px;
+}
+
+/* ===== LINK CADASTRO ===== */
+.signup{
+  margin: 14px 0 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.signup a{
+  color: #0b7a62;
+  text-decoration: underline;
 }
 
 /* ===== RESPONSIVO ===== */

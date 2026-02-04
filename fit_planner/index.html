@@ -21,16 +21,26 @@
         <img class="brand-logo" src="assets/logo_fitplanner.png" alt="FitPlanner" />
       </a>
 
-      <nav class="nav" aria-label="Navegação principal">
-        <a class="nav-link active" href="#home">Home</a>
-        <a class="nav-link" href="#sobre">Sobre</a>
-        <a class="nav-link" href="#funcionalidades">Funcionalidades</a>
-        <a class="nav-link" href="#contato">Contato</a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#sobre">Sobre</a>
+      <a class="nav-link" href="#funcionalidades">Funcionalidades</a>
+      <a class="nav-link" href="#contato">Contato</a>
 
-        <!-- novos botões -->
-        <a class="nav-link nav-btn" href="login.html">Login</a>
-        <a class="nav-link nav-btn nav-btn-green" href="cadastro.html">Cadastrar</a>
-      </nav>
+      <!-- App inteligente -->
+      <a id="btnApp" class="nav-link nav-btn" href="html/login.html">App</a>
+
+      <!-- Texto "Olá, email" (JS controla) -->
+      <span id="helloUser" class="nav-link" style="display:none; cursor:default;"></span>
+
+      <!-- Conta (JS controla) -->
+      <a id="btnLogin" class="nav-link nav-btn" href="html/login.html">Login</a>
+      <a id="btnCadastrar" class="nav-link nav-btn nav-btn-green" href="html/cadastro.html">Cadastrar</a>
+
+      <!-- Sair (JS controla) -->
+      <a id="btnSairLanding" class="nav-link nav-btn" href="#" style="display:none;">Sair</a>
+    </nav>
+
 
       <button class="burger" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -52,7 +62,7 @@
           para quem busca desempenho, controle e evolução constante.
         </p>
 
-        <a class="btn btn-primary" href="cadastro_treino.html">COMEÇAR AGORA</a>
+        <a class="btn btn-primary" href="html/cadastro_treino.html">COMEÇAR AGORA</a>
       </div>
     </div>
   </main>
@@ -70,7 +80,6 @@
       <div class="features">
         <div class="card">
           <div class="icon" aria-hidden="true">
-            <!-- checklist -->
             <svg viewBox="0 0 24 24" fill="none">
               <path d="M9 11l2 2 4-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M7 21h10a4 4 0 0 0 4-4V7a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v10a4 4 0 0 0 4 4Z" stroke="currentColor" stroke-width="2"/>
@@ -82,7 +91,6 @@
 
         <div class="card">
           <div class="icon" aria-hidden="true">
-            <!-- gráfico -->
             <svg viewBox="0 0 24 24" fill="none">
               <path d="M4 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               <path d="M4 19H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -96,7 +104,6 @@
 
         <div class="card">
           <div class="icon" aria-hidden="true">
-            <!-- storage -->
             <svg viewBox="0 0 24 24" fill="none">
               <path d="M4 6c0-1.1 3.6-2 8-2s8 .9 8 2-3.6 2-8 2-8-.9-8-2Z" stroke="currentColor" stroke-width="2"/>
               <path d="M4 6v6c0 1.1 3.6 2 8 2s8-.9 8-2V6" stroke="currentColor" stroke-width="2"/>
@@ -109,7 +116,6 @@
 
         <div class="card">
           <div class="icon" aria-hidden="true">
-            <!-- smile -->
             <svg viewBox="0 0 24 24" fill="none">
               <path d="M8 14s1.5 2 4 2 4-2 4-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               <path d="M9 10h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
@@ -197,7 +203,7 @@
         <p class="section-subtitle">Quer falar com a equipe? Deixe sua mensagem.</p>
       </div>
 
-      <form class="contact" autocomplete="on">
+      <form id="contactFormLanding" class="contact" autocomplete="on">
         <div class="contact-grid">
           <label class="field">
             <span>Nome</span>

@@ -31,8 +31,7 @@ form.addEventListener("submit", (e) => {
 
   msg.textContent = "Cadastro feito! Agora faça login.";
 
-  // se quiser mandar direto pro login depois de 1s:
   setTimeout(() => {
-    window.location.href = "login.html";
+    window.location.href = "./login.html";
   }, 1000);
 });

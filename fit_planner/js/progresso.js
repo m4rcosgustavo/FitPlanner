@@ -1,3 +1,40 @@
+// ===== BLOQUEIO (precisa estar logado) =====
+if (localStorage.getItem("fitplanner_logado") !== "true") {
+  window.location.href = "./login.html";
+}
+
+// ===== Util: chave de treinos por usuário =====
+function getEmailLogado() {
+  return (localStorage.getItem("fitplanner_email") || "").trim().toLowerCase();
+}
+
+function getTreinosKey() {
+  const email = getEmailLogado();
+  return `fitplanner_treinos__${email || "anon"}`;
+}
+
+// ===== Botão Sair no menu (app) =====
+(function () {
+  const nav = document.querySelector(".nav");
+  if (!nav) return;
+  if (nav.querySelector("#btnSair")) return;
+
+  const btn = document.createElement("a");
+  btn.id = "btnSair";
+  btn.href = "#";
+  btn.className = "nav-link";
+  btn.textContent = "Sair";
+
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    localStorage.removeItem("fitplanner_logado");
+    localStorage.removeItem("fitplanner_email");
+    window.location.href = "../index.html";
+  });
+
+  nav.appendChild(btn);
+})();
+
 const qtdTreinosEl = document.getElementById("qtdTreinos");
 const volumeTotalEl = document.getElementById("volumeTotal");
 const maiorVolumeEl = document.getElementById("maiorVolume");
@@ -10,7 +47,7 @@ const topExerciciosEl = document.getElementById("topExercicios");
 const msgEl = document.getElementById("msg");
 
 function getTreinos() {
-  const dados = localStorage.getItem("fitplanner_treinos");
+  const dados = localStorage.getItem(getTreinosKey());
   if (!dados) return [];
   return JSON.parse(dados);
 }
@@ -20,8 +57,7 @@ function calcVolume(t) {
 }
 
 function montarTopExercicios(treinos) {
-  // conta quantas vezes cada exercício aparece
-  const contagem = {}; // { "supino": 3, "agachamento": 2 }
+  const contagem = {};
 
   treinos.forEach((t) => {
     const nome = (t.exercicio || "").trim().toLowerCase();
@@ -31,7 +67,6 @@ function montarTopExercicios(treinos) {
     contagem[nome] += 1;
   });
 
-  // transforma em lista e ordena
   const lista = Object.keys(contagem).map((nome) => {
     return { nome, qtd: contagem[nome] };
   });
@@ -57,11 +92,8 @@ function render() {
   }
 
   msgEl.textContent = "";
-
-  // quantidade
   qtdTreinosEl.textContent = treinos.length;
 
-  // volume total + maior volume + média + séries/reps totais
   let volumeTotal = 0;
   let maior = 0;
   let somaSeries = 0;
@@ -85,13 +117,12 @@ function render() {
   totalSeriesEl.textContent = somaSeries;
   totalRepsEl.textContent = somaReps;
 
-  // top exercícios
   const top3 = montarTopExercicios(treinos);
 
   topExerciciosEl.innerHTML = "";
-
   if (top3.length === 0) {
-    topExerciciosEl.innerHTML = `<p style="color:#fff;font-size:11px;text-align:center;margin:0;">Sem exercícios suficientes.</p>`;
+    topExerciciosEl.innerHTML =
+      `<p style="color:#fff;font-size:11px;text-align:center;margin:0;">Sem exercícios suficientes.</p>`;
     return;
   }
 

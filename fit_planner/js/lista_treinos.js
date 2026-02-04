@@ -1,3 +1,40 @@
+// ===== BLOQUEIO (precisa estar logado) =====
+if (localStorage.getItem("fitplanner_logado") !== "true") {
+  window.location.href = "./login.html";
+}
+
+// ===== Util: chave de treinos por usuário =====
+function getEmailLogado() {
+  return (localStorage.getItem("fitplanner_email") || "").trim().toLowerCase();
+}
+
+function getTreinosKey() {
+  const email = getEmailLogado();
+  return `fitplanner_treinos__${email || "anon"}`;
+}
+
+// ===== Botão Sair no menu (app) =====
+(function () {
+  const nav = document.querySelector(".nav");
+  if (!nav) return;
+  if (nav.querySelector("#btnSair")) return;
+
+  const btn = document.createElement("a");
+  btn.id = "btnSair";
+  btn.href = "#";
+  btn.className = "nav-link";
+  btn.textContent = "Sair";
+
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    localStorage.removeItem("fitplanner_logado");
+    localStorage.removeItem("fitplanner_email");
+    window.location.href = "../index.html";
+  });
+
+  nav.appendChild(btn);
+})();
+
 const listaEl = document.getElementById("lista");
 const msgEl = document.getElementById("msg");
 
@@ -16,17 +53,16 @@ const editMsg = document.getElementById("editMsg");
 const cancelBtn = document.getElementById("cancelBtn");
 
 function getTreinos() {
-  const dados = localStorage.getItem("fitplanner_treinos");
+  const dados = localStorage.getItem(getTreinosKey());
   if (!dados) return [];
   return JSON.parse(dados);
 }
 
 function saveTreinos(lista) {
-  localStorage.setItem("fitplanner_treinos", JSON.stringify(lista));
+  localStorage.setItem(getTreinosKey(), JSON.stringify(lista));
 }
 
 function calcVolume(t) {
-  // volume = séries * reps * carga
   return t.series * t.reps * (t.carga || 0);
 }
 
@@ -172,7 +208,6 @@ editForm.addEventListener("submit", (e) => {
   editMsg.textContent = "Edição salva!";
   setTimeout(() => (editMsg.textContent = ""), 1500);
 
-  // limpa form
   editId.value = "";
   editForm.reset();
 

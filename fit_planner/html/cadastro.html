@@ -9,29 +9,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="cadastro.css" />
+  <!-- CSS está em /css -->
+  <link rel="stylesheet" href="../css/cadastro.css" />
 </head>
 <body>
 
   <!-- MENU -->
   <header class="topbar">
     <div class="container topbar-inner">
-      <a class="brand" href="index.html" aria-label="Ir para Home">
-        <img class="brand-logo" src="assets/logo_fitplanner.png" alt="FitPlanner">
+      <!-- Home (raiz) -->
+      <a class="brand" href="../index.html" aria-label="Ir para Home">
+        <!-- assets (raiz) -->
+        <img class="brand-logo" src="../assets/logo_fitplanner.png" alt="FitPlanner">
       </a>
 
       <nav class="nav">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="index.html#sobre">Sobre</a>
-        <a class="nav-link" href="index.html#funcionalidades">Funcionalidades</a>
-        <a class="nav-link" href="index.html#contato">Contato</a>
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="../index.html#sobre">Sobre</a>
+        <a class="nav-link" href="../index.html#funcionalidades">Funcionalidades</a>
+        <a class="nav-link" href="../index.html#contato">Contato</a>
       </nav>
     </div>
   </header>
 
   <!-- VOLTAR -->
   <div class="container">
-    <a class="back" href="login.html">voltar &gt;</a>
+    <a class="back" href="./login.html">voltar &gt;</a>
   </div>
 
   <!-- CONTEÚDO -->
@@ -69,10 +72,11 @@
     </section>
 
     <p class="signin">
-      Já tem conta? <a href="login.html">Login</a>
+      Já tem conta? <a href="./login.html">Login</a>
     </p>
   </main>
 
-  <script src="cadastro.js"></script>
+  <!-- JS está em /js -->
+  <script src="../js/cadastro.js"></script>
 </body>
 </html>

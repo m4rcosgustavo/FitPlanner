@@ -36,7 +36,7 @@ body{
 }
 
 .brand-logo{
-  height: 56px;
+  height: 50px;
   width: auto;
 }
 
@@ -57,10 +57,6 @@ body{
 .nav-link:hover{
   color: #fff;
   background: rgba(255,255,255,0.08);
-}
-
-.nav-link.active{
-  color: #fff;
 }
 
 /* ===== VOLTAR ===== */
@@ -84,8 +80,8 @@ body{
   font-weight: 700;
 }
 
-/* ===== CARD LOGIN ===== */
-.login-card{
+/* ===== CARD CADASTRO ===== */
+.register-card{
   width: 680px;
   max-width: 100%;
   margin: 0 auto;
@@ -94,7 +90,7 @@ body{
   padding: 26px 22px;
 }
 
-.login-title{
+.register-title{
   margin: 0 0 22px;
   color: #fff;
   font-size: 18px;
@@ -102,13 +98,13 @@ body{
 }
 
 /* ===== FORM ===== */
-.login-form{
+.register-form{
   text-align: left;
 }
 
 .field{
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .field span{
@@ -154,14 +150,14 @@ body{
   min-height: 16px;
 }
 
-/* ===== LINK CADASTRO ===== */
-.signup{
+/* ===== LINK LOGIN ===== */
+.signin{
   margin: 14px 0 0;
   font-size: 12px;
   font-weight: 600;
 }
 
-.signup a{
+.signin a{
   color: #0b7a62;
   text-decoration: underline;
 }

@@ -36,7 +36,7 @@ body{
 }
 
 .brand-logo{
-  height: 56px;
+  height: 50px;
   width: auto;
 }
 
@@ -57,6 +57,10 @@ body{
 .nav-link:hover{
   color: #fff;
   background: rgba(255,255,255,0.08);
+}
+
+.nav-link.active{
+  color: #fff;
 }
 
 /* ===== VOLTAR ===== */
@@ -80,9 +84,9 @@ body{
   font-weight: 700;
 }
 
-/* ===== CARD CADASTRO ===== */
-.register-card{
-  width: 680px;
+/* ===== CARD ===== */
+.card{
+  width: 520px;
   max-width: 100%;
   margin: 0 auto;
   background: #0b7a62;
@@ -90,15 +94,15 @@ body{
   padding: 26px 22px;
 }
 
-.register-title{
-  margin: 0 0 22px;
+.card-title{
+  margin: 0 0 20px;
   color: #fff;
   font-size: 18px;
   font-weight: 800;
 }
 
 /* ===== FORM ===== */
-.register-form{
+.form{
   text-align: left;
 }
 
@@ -124,45 +128,51 @@ body{
   font-size: 12px;
 }
 
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.actions{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
 .btn{
-  display: block;
-  margin: 10px auto 0;
-  padding: 8px 22px;
+  padding: 9px 18px;
   border: 0;
   border-radius: 10px;
-  background: #fff;
+  background: #ffffff;
   color: #111;
   font-weight: 700;
   font-size: 12px;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn:hover{
   filter: brightness(0.96);
 }
 
-/* mensagem */
+.btn-light{
+  background: rgba(255,255,255,0.85);
+}
+
 .msg{
-  margin: 10px 0 0;
+  margin: 12px 0 0;
   font-size: 11px;
   text-align: center;
   color: #fff;
   min-height: 16px;
 }
 
-/* ===== LINK LOGIN ===== */
-.signin{
-  margin: 14px 0 0;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.signin a{
-  color: #0b7a62;
-  text-decoration: underline;
-}
-
 /* ===== RESPONSIVO ===== */
 @media (max-width: 640px){
   .nav{ display: none; }
+  .grid{ grid-template-columns: 1fr; }
+  .actions{ flex-direction: column; }
 }
